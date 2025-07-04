@@ -39,3 +39,7 @@ test("handles delimiter of any length", () => {
 test("handles multiple single-char delimiters", () => {
   expect(add("//[*][%]\n1*2%3")).toBe(6);
 });
+
+test("handles multiple delimiters with length > 1", () => {
+  expect(add("//[***][%%]\n1***2%%3")).toBe(6);
+});
